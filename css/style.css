@@ -467,6 +467,7 @@ header {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -505,6 +506,7 @@ header {
 
 .field-form {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .label-form {
@@ -521,6 +523,26 @@ header {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-form:focus {
+  outline: 1px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.icon-modal {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-form:focus ~ .icon-modal {
+  fill: #2196f3;
 }
 
 .comment-form {
@@ -541,11 +563,21 @@ header {
   letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment-form:focus {
+  outline: 1px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .label-checkbox {
   display: block;
+  margin-bottom: 30px;
 }
+
 .label-checkbox > a {
   color: var(--color-accent);
 }
@@ -556,7 +588,6 @@ header {
   line-height: 1.71;
 
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
 }
 
 .button-form {
@@ -785,4 +816,62 @@ footer .contacts {
 
 .footer-links-list > li + li {
   margin-left: 10px;
+}
+
+/* подписывайтесь */
+
+.footer-field-form {
+  margin-left: 93px;
+}
+
+.footer-form {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--complementary-color);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.input-footer-form {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--background-footer);
+
+  margin-right: 12px;
+  padding-left: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-footer-form {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--complementary-color);
+
+  padding-left: 29px;
 }
