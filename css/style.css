@@ -486,10 +486,14 @@ header {
 
   background: var(--complementary-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #2196f3;
 }
 
+.icon-modal-close:hover {
+  fill: currentColor;
+}
 /* форма модального окна */
 
 .title-form {
@@ -576,18 +580,52 @@ header {
 .label-checkbox {
   display: block;
   margin-bottom: 30px;
+  margin-left: 12px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  position: relative;
+  display: flex;
 }
 
 .label-checkbox > a {
   color: var(--color-accent);
+  margin-left: 2px;
 }
 
 .input-checkbox {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
 
-  letter-spacing: 0.03em;
+.span-icon-checkbox {
+  opacity: 1;
+  position: relative;
+
+  display: block;
+  margin-right: 8.38px;
+  top: 2px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.span-blu-checkbox {
+  position: absolute;
+  margin-right: 7px;
+  opacity: 0;
+  display: block;
+  top: 2px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-checkbox:checked ~ .span-blu-checkbox {
+  opacity: 1;
 }
 
 .button-form {
@@ -874,4 +912,8 @@ footer .contacts {
   color: var(--complementary-color);
 
   padding-left: 29px;
+}
+
+.button-icon-footer {
+  margin-left: 10px;
 }
